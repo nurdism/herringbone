@@ -4,6 +4,8 @@ A browser app that turns a handful of sliders into a complete build kit for a
 hollow, fishbone framed wooden stand up paddleboard: laser and CNC cut files,
 STLs, and a build guide with the numbers you actually need at the bench.
 
+**[herringbone.nurdism.dev](https://herringbone.nurdism.dev/)**
+
 Nothing is uploaded anywhere. The whole generator runs in the page.
 
 ## What comes out
@@ -98,6 +100,10 @@ pnpm check       # the self test, see below
 
 pnpm needs to run esbuild's install script, which fetches its platform
 binary. That permission lives in `pnpm-workspace.yaml` under `allowBuilds`.
+
+Every push to `main` builds and publishes `dist/` to
+[herringbone.nurdism.dev](https://herringbone.nurdism.dev/) through
+`.github/workflows/deploy.yml`.
 
 The app keeps your board in `localStorage` and in the URL hash, so a link is
 a complete board. Presets are a starting point, not a constraint.

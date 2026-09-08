@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.22.0",
   "description": "Parametric generator for hollow fishbone-frame SUP paddleboards: laser/CNC cut files, STLs and build docs",
   "scripts": {
     "dev": "vite",
