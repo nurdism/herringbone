@@ -1,0 +1,7 @@
+# esbuild's install script fetches its platform binary, so it has to run or the
+# package cannot work at all. It is a first party dependency of vite.
+allowBuilds:
+  esbuild: true
+
+minimumReleaseAgeExclude:
+  - '@types/node@26.5.0'

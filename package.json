@@ -1,0 +1,26 @@
+{
+  "name": "herringbone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Parametric generator for hollow fishbone-frame SUP paddleboards: laser/CNC cut files, STLs and build docs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "earcut": "^3.0.2",
+    "jszip": "^3.10.1",
+    "three": "^0.181.0"
+  },
+  "devDependencies": {
+    "@types/earcut": "^3.0.0",
+    "@types/node": "^26.5.0",
+    "@types/three": "^0.180.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.14"
+  }
+}

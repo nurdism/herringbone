@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2310141a'/%3E%3Cg fill='none' stroke='%235ac8fa' stroke-width='1.6'%3E%3Cpath d='M4 16 Q10 5 16 5 Q22 5 28 16 Q22 27 16 27 Q10 27 4 16 Z'/%3E%3Cpath d='M6 16 H26'/%3E%3Cpath d='M11 9.5 V22.5'/%3E%3Cpath d='M16 7.5 V24.5'/%3E%3Cpath d='M21 9.5 V22.5'/%3E%3C/g%3E%3C/svg%3E" />
+    <title>Herringbone</title>
+    <meta name="description" content="Parametric generator for hollow fishbone frame paddleboards. Exports laser and CNC cut files, STLs and a build guide." />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <svg viewBox="0 0 40 16" class="mark" aria-hidden="true">
+            <path d="M1 8 Q 8 1 20 1 Q 32 1 39 8 Q 32 15 20 15 Q 8 15 1 8 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M2 8 H38" stroke="currentColor" stroke-width="1"/>
+            <g stroke="currentColor" stroke-width="0.8">
+              <path d="M7 4.2 V11.8"/><path d="M12 2.6 V13.4"/><path d="M17 2.1 V13.9"/>
+              <path d="M22 2.1 V13.9"/><path d="M27 2.6 V13.4"/><path d="M32 4.2 V11.8"/>
+            </g>
+          </svg>
+          <div>
+            <h1>Herringbone</h1>
+            <p class="sub">Hollow wooden paddleboards, from sliders to cut files</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span id="status" class="status"></span>
+          <button id="btn-export" class="primary">Download build kit</button>
+        </div>
+      </header>
+
+      <div class="body">
+        <aside class="sidebar" id="sidebar"></aside>
+
+        <main class="main">
+          <div class="statbar" id="statbar"></div>
+          <nav class="tabs" id="tabs">
+            <button data-tab="view3d" class="active">3D</button>
+            <button data-tab="sheets">Cut sheets</button>
+            <button data-tab="notes">Build notes</button>
+          </nav>
+          <section class="pane active" id="pane-view3d">
+            <div class="viewer-wrap">
+              <canvas id="canvas"></canvas>
+              <div class="viewer-hud" id="viewer-hud"></div>
+              <div class="viewer-tools" id="viewer-tools"></div>
+            </div>
+          </section>
+          <section class="pane" id="pane-sheets"></section>
+          <section class="pane" id="pane-notes"></section>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
